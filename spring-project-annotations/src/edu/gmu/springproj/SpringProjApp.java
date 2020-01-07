@@ -13,7 +13,7 @@ public class SpringProjApp {
 		
 		/* retrieve bean from spring container.
 		   'myWiseCoach' is bean id. 'Coach.class' is interface. */
-		Coach aCoach = context.getBean("tennisCoach", Coach.class);
+		Coach aCoach = context.getBean("swimmingCoach", Coach.class);
 		
 		// call methods on the bean.
 		System.out.println(aCoach.getDailyWorkout());

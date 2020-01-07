@@ -12,11 +12,12 @@ public class SpringProjApp {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		/* retrieve bean from spring container.
-		   'myWiseCoach' is bean id. 'Coach.class' is interface. */
-		Coach aCoach = context.getBean("swimmingCoach", Coach.class);
+		   'tennisCoach' is bean id. 'Coach.class' is interface. */
+		Coach aCoach = context.getBean("tennisCoach", Coach.class);
 		
 		// call methods on the bean.
 		System.out.println(aCoach.getDailyWorkout());
+		System.out.println(aCoach.getDailyFortune());
 		
 		// close the application context.
 		context.close();

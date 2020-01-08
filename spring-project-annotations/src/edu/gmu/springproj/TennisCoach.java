@@ -8,13 +8,23 @@ public class TennisCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	
+	// define default constructor.
 	public TennisCoach() {
-		System.out.println("TennisCoach: in no-arg constructor!");
+		System.out.println("TennisCoach: >> inside default constructor!");
 	}
 	
+	/*
 	@Autowired
 	public TennisCoach(FortuneService aFortuneService) {
 		System.out.println("TennisCoach: in an arg constructor!");
+		
+		fortuneService = aFortuneService;
+	} */
+	
+	// define setter method.
+	@Autowired
+	public void setFortuneService(FortuneService aFortuneService) {
+		System.out.println("TennisCoach: >> inside setFortuneService() method!");
 		
 		fortuneService = aFortuneService;
 	}

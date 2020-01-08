@@ -21,10 +21,19 @@ public class TennisCoach implements Coach {
 		fortuneService = aFortuneService;
 	} */
 	
-	// define setter method.
+	// define a setter method. 
+	/*
 	@Autowired
 	public void setFortuneService(FortuneService aFortuneService) {
 		System.out.println("TennisCoach: >> inside setFortuneService() method!");
+		
+		fortuneService = aFortuneService;
+	} */
+
+	// define a method
+	@Autowired
+	public void doSomeStuff(FortuneService aFortuneService) {
+		System.out.println("TennisCoach: in a method!");
 		
 		fortuneService = aFortuneService;
 	}

@@ -7,23 +7,26 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 	
+	private FortuneService fortuneService;
+	
 	// field injection.
+	/*
 	@Autowired
 	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
-	
+	*/
 	// define default constructor.
 	public TennisCoach() {
 		System.out.println("TennisCoach: >> inside default constructor!");
 	}
 	
-	/*
+	
 	@Autowired
-	public TennisCoach(FortuneService aFortuneService) {
+	public TennisCoach( @Qualifier("randomFortuneService") FortuneService aFortuneService) {
 		System.out.println("TennisCoach: in an arg constructor!");
 		
 		fortuneService = aFortuneService;
-	} */
+	} 
 	
 	// define a setter method. 
 	/*
